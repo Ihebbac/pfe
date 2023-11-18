@@ -1,4 +1,140 @@
-QCM:
-  Q1:
+questions:
+  - name: "Retenez-vous mieux les informations à partir des diaporamas et des vidéos ?"
+    style: "auditif" # s
+    respense:
+      - choix: "Oui"
+        score: 60
+      - choix: "Non"
+        score: 20
+      - choix: "other"
+        score: 20
+  - name´: "Comment prenez-vous habituellement des notes en classe ou pendant vos études ?"
+    style: "generique"
+    respense:
+      - choix: "Notes écrites et diagrammes"
+        score: 100
+      - choix: "Enregistrement de notes audio"
+        score: 100
+      - choix: "Utiliser des méthodes pratiques telles que les cartes mentales ou le matériel de manipulation"
+        score: 100
+  - name´: "Choisissez l'activité qui vous plaît le plus"
+    style: "generique"
+    respense:
+      - choix: "Regarder des vidéos éducatives"
+        score: 100
+      - choix: "Participer aux discussions en classe"
+        score: 100
+      - choix: "Participer à des expériences ou à des projets pratiques"
+        score: 100
+  - name´: "Comment pensez-vous apprendre une nouvelle compétence de la manière la plus efficace"
+    style: "generique"
+    respense:
+      - choix: "Regarder quelqu'un faire une démonstration"
+        score: 100
+      - choix: "Écouter les instructions"
+        score: 100
+      - choix: "Essayer par soi-même avec une pratique concrète"
+        score: 100
+  - name´: "Dans un projet de groupe, quel rôle jouez-vous naturellement ?"
+    style: "generique"
+    respense:
+      - choix: "Conception d'éléments visuels (graphiques, présentations)"
+        score: 100
+      - choix: "Faciliter les discussions et la communication"
+        score: 100
+      - choix: "Contribuer aux aspects pratiques"
+        score: 100
+  - name´: "Préférez-vous mémoriser des informations visuelles comme des tableaux ou des graphiques lorsque vous étudiez ?"
+    style: "visuel"
+    respense:
+      - choix: "oui"
+        score: 80
+      - choix: "non"
+        score: 10
+      - choix: "other"
+        score: 10
+  - name´: "Choisissez l'activité qui vous plaît le plus"
+    style: "generique"
+    respense:
+      - choix: "Regarder des vidéos éducatives"
+        score: 100
+      - choix: "Participer aux discussions en classe"
+        score: 100
+      - choix: "Participer à des expériences ou à des projets pratiques"
+        score: 100
+  - name´: "Choisissez l'activité qui vous plaît le plus"
+    style: "generique"
+    respense:
+      - choix: "Regarder des vidéos éducatives"
+        score: 100
+      - choix: "Participer aux discussions en classe"
+        score: 100
+      - choix: "Participer à des expériences ou à des projets pratiques"
+        score: 100
+  - name´: "Choisissez l'activité qui vous plaît le plus"
+    style: "generique"
+    respense:
+      - choix: "Regarder des vidéos éducatives"
+        score: 100
+      - choix: "Participer aux discussions en classe"
+        score: 100
+      - choix: "Participer à des expériences ou à des projets pratiques"
+        score: 100
+  - name´: "Choisissez l'activité qui vous plaît le plus"
+    style: "generique"
+    respense:
+      - choix: "Regarder des vidéos éducatives"
+        score: 100
+      - choix: "Participer aux discussions en classe"
+        score: 100
+      - choix: "Participer à des expériences ou à des projets pratiques"
+        score: 100
+  - name´: "Choisissez l'activité qui vous plaît le plus"
+    style: "generique"
+    respense:
+      - choix: "Regarder des vidéos éducatives"
+        score: 100
+      - choix: "Participer aux discussions en classe"
+        score: 100
+      - choix: "Participer à des expériences ou à des projets pratiques"
+        score: 100
+  - name´: "Choisissez l'activité qui vous plaît le plus"
+    style: "generique"
+    respense:
+      - choix: "Regarder des vidéos éducatives"
+        score: 100
+      - choix: "Participer aux discussions en classe"
+        score: 100
+      - choix: "Participer à des expériences ou à des projets pratiques"
+        score: 100
+  - name´: "Choisissez l'activité qui vous plaît le plus"
+    style: "generique"
+    respense:
+      - choix: "Regarder des vidéos éducatives"
+        score: 100
+      - choix: "Participer aux discussions en classe"
+        score: 100
+      - choix: "Participer à des expériences ou à des projets pratiques"
+        score: 100
+  - name´: "Choisissez l'activité qui vous plaît le plus"
+    style: "generique"
+    respense:
+      - choix: "Regarder des vidéos éducatives"
+        score: 100
+      - choix: "Participer aux discussions en classe"
+        score: 100
+      - choix: "Participer à des expériences ou à des projets pratiques"
+        score: 100
+  - name´: "Choisissez l'activité qui vous plaît le plus"
+    style: "generique"
+    respense:
+      - choix: "Regarder des vidéos éducatives"
+        score: 100
+      - choix: "Participer aux discussions en classe"
+        score: 100
+      - choix: "Participer à des expériences ou à des projets pratiques"
+        score: 100
+
+
 
 
