@@ -7,18 +7,18 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.stream.IntStream;
 
 
-@RestController
+@Controller
 public class PrintController {
     @Autowired // injectih
     ReadConfigFile readConfigFile;
@@ -28,18 +28,39 @@ public class PrintController {
     private final static String AUDITIF = "auditif";
     private final static String VISUEL = "visuel";
     private final static String KINESTHESIQUE = "kinesthesique";
-    private static List<String> Group_auditif;
-    private static List<String> Group_visuel;
-    private static List<String> Group_kinesthesique;
+    private static List<StudentScor> Group_auditif;
+    private static List<StudentScor> Group_visuel;
+    private static List<StudentScor> Group_kinesthesique;
 
     @GetMapping("/") // ki etjik get jaweb heka
-    public String getList() {
+    public ModelAndView getList() {
         Group_auditif = new ArrayList<>();
         Group_visuel = new ArrayList<>();
         Group_kinesthesique = new ArrayList<>();
         readExelData();
         respenseAndPeoples.subList(1, respenseAndPeoples.size()).forEach(this::findGroup);
-        return "Group_auditif :"+Group_auditif +"Group_visuel : " +Group_visuel+"Group_kinesthesique : " +Group_kinesthesique;
+     
+        ModelAndView modelAndView = new ModelAndView();
+
+        Map<String, Object> model = new HashMap<>();
+        model.put("Group_auditif",Group_auditif);
+        model.put("Group_visuel",Group_visuel);
+        model.put("Group_kinesthesique",Group_kinesthesique);
+        model.put("size",respenseAndPeoples.size()-1);
+
+
+        Map<String, Integer> graphData = new TreeMap<>();
+        graphData.put("auditif", (Group_auditif.size()));
+        graphData.put("visuel", (Group_visuel.size()));
+        graphData.put("kinesthesique",  (Group_kinesthesique.size()));
+        model.put("chartData", graphData);
+
+        modelAndView.addAllObjects(model);
+
+        // Set the view name
+        modelAndView.setViewName("index"); // "exampleView" is the logical view name
+
+        return modelAndView;
     }
 
     private void findGroup(List<String> studentRespenses) {
@@ -47,6 +68,7 @@ public class PrintController {
         var visuelScore = 0;
         var kinesthesiqueScore = 0;
         var mail = studentRespenses.get(0);
+        var questionNumber = readConfigFile.getQuestions().size();
         List<String> studentRespensestmp = studentRespenses.subList(1, studentRespenses.size());
         for (int i = 0; i < studentRespensestmp.size(); i++) {
             var choixStudent = studentRespensestmp.get(i);
@@ -76,17 +98,17 @@ public class PrintController {
 
 
         if (Collections.max(List.of(auditifScore, visuelScore, kinesthesiqueScore)) == auditifScore) {
-            Group_auditif.add(mail);
+            Group_auditif.add(new StudentScor(mail,auditifScore));
         } else if (Collections.max(List.of(auditifScore, visuelScore, kinesthesiqueScore)) == visuelScore) {
-            Group_visuel.add(mail);
-        } else Group_kinesthesique.add(mail);
+            Group_visuel.add(new StudentScor(mail,visuelScore));
+        } else Group_kinesthesique.add(new StudentScor(mail,kinesthesiqueScore));
 
 
     }
 
 
     private static void readExelData() {
-        String excelFilePath = "C:\\Users\\sabri\\Downloads\\test.xlsx";
+        String excelFilePath = "C:\\Users\\iheb\\reponse.xlsx";
         respenseAndPeoples = new ArrayList<>();
         try (
                 FileInputStream fis = new FileInputStream(new File(excelFilePath));
@@ -106,7 +128,6 @@ public class PrintController {
                         case NUMERIC:
                             break;
                         case BLANK:
-                            listtmp.add("blank");
                             break;
                         default:
 

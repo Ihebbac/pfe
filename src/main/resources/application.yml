@@ -1,3 +1,5 @@
+server:
+  port : 8081
 questions:
   - name: "Retenez-vous mieux les informations à partir des diaporamas et des vidéos ?"
     style: "auditif" # s
@@ -8,7 +10,7 @@ questions:
         score: 20
       - choix: "other"
         score: 20
-  - name´: "Comment prenez-vous habituellement des notes en classe ou pendant vos études ?"
+  - name: "Comment prenez-vous habituellement des notes en classe ou pendant vos études ?"
     style: "generique"
     respense:
       - choix: "Notes écrites et diagrammes"
@@ -17,7 +19,7 @@ questions:
         score: 100
       - choix: "Utiliser des méthodes pratiques telles que les cartes mentales ou le matériel de manipulation"
         score: 100
-  - name´: "Choisissez l'activité qui vous plaît le plus"
+  - name: "Choisissez l'activité qui vous plaît le plus"
     style: "generique"
     respense:
       - choix: "Regarder des vidéos éducatives"
@@ -26,7 +28,7 @@ questions:
         score: 100
       - choix: "Participer à des expériences ou à des projets pratiques"
         score: 100
-  - name´: "Comment pensez-vous apprendre une nouvelle compétence de la manière la plus efficace"
+  - name: "Comment pensez-vous apprendre une nouvelle compétence de la manière la plus efficace"
     style: "generique"
     respense:
       - choix: "Regarder quelqu'un faire une démonstration"
@@ -35,7 +37,7 @@ questions:
         score: 100
       - choix: "Essayer par soi-même avec une pratique concrète"
         score: 100
-  - name´: "Dans un projet de groupe, quel rôle jouez-vous naturellement ?"
+  - name: "Dans un projet de groupe, quel rôle jouez-vous naturellement ?"
     style: "generique"
     respense:
       - choix: "Conception d'éléments visuels (graphiques, présentations)"
@@ -44,7 +46,7 @@ questions:
         score: 100
       - choix: "Contribuer aux aspects pratiques"
         score: 100
-  - name´: "Préférez-vous mémoriser des informations visuelles comme des tableaux ou des graphiques lorsque vous étudiez ?"
+  - name: "Préférez-vous mémoriser des informations visuelles comme des tableaux ou des graphiques lorsque vous étudiez ?"
     style: "visuel"
     respense:
       - choix: "oui"
@@ -53,87 +55,87 @@ questions:
         score: 10
       - choix: "other"
         score: 10
-  - name´: "Choisissez l'activité qui vous plaît le plus"
-    style: "generique"
+  - name: "Préférez-vous écouter des explications ou des discussions plutôt que de lire sur un sujet ?"
+    style: "auditif"
     respense:
-      - choix: "Regarder des vidéos éducatives"
-        score: 100
-      - choix: "Participer aux discussions en classe"
-        score: 100
-      - choix: "Participer à des expériences ou à des projets pratiques"
-        score: 100
-  - name´: "Choisissez l'activité qui vous plaît le plus"
-    style: "generique"
+      - choix: "Oui"
+        score: 70
+      - choix: "Non"
+        score: 20
+      - choix: "other"
+        score: 10
+  - name: "Aimez-vous les activités pratiques ou les expériences qui impliquent des mouvements ou des manipulations physiques ?"
+    style: "kinesthesique"
     respense:
-      - choix: "Regarder des vidéos éducatives"
-        score: 100
-      - choix: "Participer aux discussions en classe"
-        score: 100
-      - choix: "Participer à des expériences ou à des projets pratiques"
-        score: 100
-  - name´: "Choisissez l'activité qui vous plaît le plus"
-    style: "generique"
+      - choix: "Oui"
+        score: 85
+      - choix: "Non"
+        score: 10
+      - choix: "other"
+        score: 5
+  - name: "Trouvez-vous plus facile de comprendre un concept lorsque vous regardez une démonstration visuelle ?"
+    style: "visuel"
     respense:
-      - choix: "Regarder des vidéos éducatives"
-        score: 100
-      - choix: "Participer aux discussions en classe"
-        score: 100
-      - choix: "Participer à des expériences ou à des projets pratiques"
-        score: 100
-  - name´: "Choisissez l'activité qui vous plaît le plus"
-    style: "generique"
+      - choix: "Oui"
+        score: 60
+      - choix: "Non"
+        score: 30
+      - choix: "other"
+        score: 10
+  - name: "Aimez-vous parler de ce que vous avez appris ?"
+    style: "auditif"
     respense:
-      - choix: "Regarder des vidéos éducatives"
-        score: 100
-      - choix: "Participer aux discussions en classe"
-        score: 100
-      - choix: "Participer à des expériences ou à des projets pratiques"
-        score: 100
-  - name´: "Choisissez l'activité qui vous plaît le plus"
-    style: "generique"
+      - choix: "Oui"
+        score: 65
+      - choix: "Non"
+        score: 20
+      - choix: "other"
+        score: 15
+  - name: "Préférez-vous les cours qui intègrent des expériences physiques ou des démonstrations interactives ?"
+    style: "kinesthesique"
     respense:
-      - choix: "Regarder des vidéos éducatives"
-        score: 100
-      - choix: "Participer aux discussions en classe"
-        score: 100
-      - choix: "Participer à des expériences ou à des projets pratiques"
-        score: 100
-  - name´: "Choisissez l'activité qui vous plaît le plus"
-    style: "generique"
+      - choix: "Oui"
+        score: 80
+      - choix: "Non"
+        score: 15
+      - choix: "other"
+        score: 5
+  - name: "Trouvez-vous utile de prendre des pauses actives pendant l'étude, comme faire de courtes promenades ?"
+    style: "kinesthesique"
     respense:
-      - choix: "Regarder des vidéos éducatives"
-        score: 100
-      - choix: "Participer aux discussions en classe"
-        score: 100
-      - choix: "Participer à des expériences ou à des projets pratiques"
-        score: 100
-  - name´: "Choisissez l'activité qui vous plaît le plus"
-    style: "generique"
+      - choix: "Oui"
+        score: 70
+      - choix: "Non"
+        score: 20
+      - choix: "other"
+        score: 10
+  - name: "Appréciez-vous les enregistrements audio pour réviser le matériel d'étude ?"
+    style: "auditif"
     respense:
-      - choix: "Regarder des vidéos éducatives"
-        score: 100
-      - choix: "Participer aux discussions en classe"
-        score: 100
-      - choix: "Participer à des expériences ou à des projets pratiques"
-        score: 100
-  - name´: "Choisissez l'activité qui vous plaît le plus"
-    style: "generique"
+      - choix: "Oui"
+        score: 65
+      - choix: "Non"
+        score: 15
+      - choix: "other"
+        score: 20
+  - name: "Trouvez-vous plus facile de comprendre des concepts complexes à travers des images ?"
+    style: "visuel"
     respense:
-      - choix: "Regarder des vidéos éducatives"
-        score: 100
-      - choix: "Participer aux discussions en classe"
-        score: 100
-      - choix: "Participer à des expériences ou à des projets pratiques"
-        score: 100
-  - name´: "Choisissez l'activité qui vous plaît le plus"
-    style: "generique"
+      - choix: "Oui"
+        score: 75
+      - choix: "Non"
+        score: 15
+      - choix: "other"
+        score: 10
+  - name: "Est-ce que l'écoute de podcasts ou d'enregistrements audio facilite votre compréhension des sujets ?"
+    style: "auditif"
     respense:
-      - choix: "Regarder des vidéos éducatives"
-        score: 100
-      - choix: "Participer aux discussions en classe"
-        score: 100
-      - choix: "Participer à des expériences ou à des projets pratiques"
-        score: 100
+      - choix: "Oui"
+        score: 80
+      - choix: "Non"
+        score: 10
+      - choix: "other"
+        score: 10
 
 
 
